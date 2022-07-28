@@ -19,9 +19,10 @@ const Home: NextPage = () => {
         <h1 className="text-5xl mb-3">
           Bienvenidos a <div className='text-purple-700'>WizardChat!</div>
         </h1>
-        <p>Un lugar donde podras compartir y charlar con tus amigos de forma segura</p>
+        <p className='font-medium'>Un lugar donde podras compartir y charlar con tus amigos de forma segura</p>
         <Image
           src={HomeImage}
+          priority={true}
           alt="Grupo de personas con burbujas de discurso"
           layout="responsive"
         />
