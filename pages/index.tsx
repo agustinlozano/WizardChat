@@ -1,35 +1,36 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import AppLogo from 'components/icons/AppLogo'
+import HomeImage from 'public/home.svg'
+import Link from 'next/link'
 
 const Home: NextPage = () => {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
+    <div className="flex max-w-md mx-auto py-10 px-5 items-center h-full">
       <Head>
-        <title>Create Next App</title>
+        <title>WizardChat</title>
+        <meta name="description" content="secret chat by Agustin B. Lozano" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
+      <main className="text-center mx-auto">
+        <AppLogo className="w-32 h-32 mx-auto" />
+        <h1 className="text-5xl mb-3">
+          Bienvenidos a <div className='text-purple-700'>WizardChat!</div>
         </h1>
+        <p>Un lugar donde podras compartir y charlar con tus amigos de forma segura</p>
+        <Image
+          src={HomeImage}
+          alt="Grupo de personas con burbujas de discurso"
+          layout="responsive"
+        />
+        <Link href='/'>
+          <a className='px-3 py-2 bg-purple-700 rounded-md mt-5 font-medium hover:bg-purple-600'>
+            <span className='text-white'>Chatear ahora!</span>
+          </a>
+        </Link>
       </main>
-
-      <footer className="flex h-24 w-full items-center justify-center border-t">
-        <a
-          className="flex items-center justify-center gap-2"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-        </a>
-      </footer>
     </div>
   )
 }
