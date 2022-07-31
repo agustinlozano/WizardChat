@@ -1,5 +1,5 @@
 module.exports = {
-  extends: 'standard-with-typescript',
+  extends: ['next/core-web-vitals'],
   parserOptions: {
     project: './tsconfig.json'
   }
