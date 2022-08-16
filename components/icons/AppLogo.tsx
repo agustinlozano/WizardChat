@@ -3,7 +3,7 @@ import { twMerge } from 'tailwind-merge'
 function AppLogo ({ className }: {className?: string}) {
   return (
     <svg
-      className={twMerge('h-20 w-20 text-purple-700', className)}
+      className={twMerge('m-auto h-20 w-20 text-purple-700', className)}
       viewBox="0 0 700 700"
       xmlns="http://www.w3.org/2000/svg">
       <path

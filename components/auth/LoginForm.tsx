@@ -11,7 +11,8 @@ import Alert from 'components/ui/Alert'
 import MyButton from 'components/ui/MyButton'
 import Input from '../form/Input'
 import Feedback from '../form/Feedback'
-import GitHubSignIn from './GitHubSignIn'
+import GoogleSignIn from './GoolgeSignIn'
+import Spinener from 'components/ui/Spinner'
 
 const schema = object({
   email: string().email().required(),
@@ -28,8 +29,8 @@ const LoginFrom = ({ onSuccess }: LoginFormProps) => {
     formState: { errors, touchedFields, isSubmitting }
   } = useForm<Credentials>({ resolver: yupResolver(schema) })
 
-  const onSubmit = (credentials: Credentials) => {
-    const { error } = signIn(credentials)
+  const onSubmit = async (credentials: Credentials) => {
+    const { error } = await signIn(credentials)
     
     if (!error) {
       setTimeout(() => {
@@ -69,9 +70,9 @@ const LoginFrom = ({ onSuccess }: LoginFormProps) => {
         <MyButton
           className="w-full flex items-center justify-center gap-2 mb-2"
           disabled={isSubmitting}
-        />
+        >{isSubmitting && <Spinener />} Iniciar sesión</MyButton>
       </form>
-      <GitHubSignIn />
+      <GoogleSignIn />
     </>
   )
 }
