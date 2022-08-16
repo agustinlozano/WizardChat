@@ -16,7 +16,7 @@ const Login: NextPage = () => {
       <h1 className="text-center text-2xl font-bold mb-5">SecretChat | Login</h1>
 
       <LoginForm onSuccess={async () => await router.push('/chat')} />
-
+      
       <Link href="/register">
         <a>¿No tienes cuenta? ¡Regístrate ahora!</a>
       </Link>
