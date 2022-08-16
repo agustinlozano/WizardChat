@@ -10,7 +10,7 @@ const Home: NextPage = () => {
     <div className="flex max-w-md mx-auto py-10 px-5 items-center h-full">
       <Head>
         <title>WizardChat | Home</title>
-        <meta name="description" content="secret chat by Agustin B. Lozano" />
+        <meta name="description" content="secret chat by Wizoft" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

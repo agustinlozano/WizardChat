@@ -8,7 +8,7 @@ const MyApp: React.FC<any> = ({ Component, pageProps }: AppProps) => {
     <>
       <Head>
         <title>WizardChat</title>
-        <meta name="description" content="secret chat by Yhan \& Reynaldo" />
+        <meta name="description" content="secret chat by Wizoft" />
         <link rel="icon" href="/logo.svg" />
       </Head>
       <AuthProvider>
